@@ -26,6 +26,11 @@ No build step is required — the site is static HTML.
 - The evidence — four interactive charts (emissions gap, material extraction, pollution deaths, plastic fate)
 - The feedback loop — self-reinforcing emissions–pollution cycle
 - The levers — five interventions plus a policy table
+- Sustainability — the operating system, pillars, and linear-versus-sustainable logic
+- Circularity — the R-ladder from refuse to recover
+- Pathways — six sectoral transition routes
+- Metrics — material-footprint chart and the sustainability scorecard
+- Roadmap — the 2025–2030 sequence
 - The verdict — the binding term
 
 ## Sources

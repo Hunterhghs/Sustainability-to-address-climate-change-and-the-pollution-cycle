@@ -161,6 +161,32 @@ tbody td:first-child{font-weight:700;color:var(--ink)}
 .tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(31,138,91,.12);color:var(--emerald)}
 .tag.amber{background:rgba(217,164,65,.16);color:var(--toxic-deep)}
 
+/* Sustainability deep dive */
+.pillars{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;margin-bottom:44px}
+.pillars-prose h3{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.25;margin-bottom:18px}
+.pillars-prose p{color:var(--ink-soft);margin-bottom:16px}
+.pillars-svg{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:var(--shadow-soft)}
+.pillars-svg svg{width:100%;height:auto;display:block}
+.ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:8px}
+.ladder-step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 14px;text-align:center;transition:transform .2s ease,box-shadow .2s ease}
+.ladder-step:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+.ladder-step .r{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--emerald);display:block;margin-bottom:8px}
+.ladder-step .name{font-weight:700;font-size:14px;display:block;margin-bottom:6px;color:var(--ink)}
+.ladder-step p{font-size:12.5px;color:var(--ink-soft);line-height:1.5;margin:0}
+.ladder-note{max-width:760px;margin-top:24px;font-size:15px;color:var(--ink-soft)}
+.scorecard{list-style:none;display:grid;gap:14px}
+.scorecard li{display:grid;grid-template-columns:190px 1fr;gap:16px;align-items:baseline;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.scorecard .k{font-weight:700;font-size:14.5px;color:var(--ink)}
+.scorecard .v{font-size:14.5px;color:var(--ink-soft)}
+@media (max-width:1020px){
+  .pillars{grid-template-columns:1fr;gap:36px}
+  .ladder{grid-template-columns:repeat(3,1fr)}
+  .scorecard li{grid-template-columns:1fr;gap:6px}
+}
+@media (max-width:640px){
+  .ladder{grid-template-columns:repeat(2,1fr)}
+}
+
 /* Binding */
 .binding{padding:110px 28px;text-align:center;max-width:900px}
 .binding .eyebrow{justify-content:center}
@@ -216,6 +242,7 @@ tbody td:first-child{font-weight:700;color:var(--ink)}
       <a href="#evidence">Evidence</a>
       <a href="#loop">The loop</a>
       <a href="#levers">Levers</a>
+      <a href="#sustainability">Sustainability</a>
       <a class="nav-cta" href="#binding">Read the verdict</a>
     </nav>
   </div>
@@ -512,6 +539,203 @@ tbody td:first-child{font-weight:700;color:var(--ink)}
     </div>
   </section>
 
+  <!-- SUSTAINABILITY -->
+  <section id="sustainability" class="rule">
+    <div class="section-head reveal">
+      <span class="eyebrow">The sustainability frame</span>
+      <h2>Sustainability is the operating system, not the goal.</h2>
+      <p class="lede">The loop-breaking levers hold only inside a broader operating logic. Sustainability names that logic: an economy that runs on regeneration instead of extraction, and measures success in stocks of natural and social capital, not just flows of output.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillars-prose reveal">
+        <h3>Three capacities must regenerate together.</h3>
+        <p>Sustainability is usually drawn as three overlapping circles: environment, society, economy. That diagram hides the hard part. The three are not equal partners to be balanced. The ecological system sets the boundary conditions, the social system sets the legitimacy conditions, and the economy is the mechanism that must satisfy both.</p>
+        <p>Read as a balance-sheet rule, the Brundtland definition becomes operational: never draw down a stock of capital faster than it regenerates. Climate change and pollution are the two loudest signals that the current economy violates that rule. The natural capital account is being spent, not managed.</p>
+      </div>
+      <div class="pillars-svg reveal">
+        <svg viewBox="0 0 520 380" role="img" aria-label="Three overlapping circles: ecological ceiling, social foundation, and economic engine, meeting in a regenerative economy">
+          <circle cx="185" cy="215" r="118" fill="rgba(31,138,91,.10)" stroke="#1f8a5b" stroke-width="1.5"/>
+          <text x="185" y="88" text-anchor="middle" fill="#1f8a5b" font-size="14" font-weight="700" font-family="Inter,sans-serif">Ecological</text>
+          <text x="185" y="106" text-anchor="middle" fill="#1f8a5b" font-size="14" font-weight="700" font-family="Inter,sans-serif">ceiling</text>
+          <circle cx="335" cy="215" r="118" fill="rgba(217,164,65,.10)" stroke="#d9a441" stroke-width="1.5"/>
+          <text x="335" y="88" text-anchor="middle" fill="#b57f1d" font-size="14" font-weight="700" font-family="Inter,sans-serif">Social</text>
+          <text x="335" y="106" text-anchor="middle" fill="#b57f1d" font-size="14" font-weight="700" font-family="Inter,sans-serif">foundation</text>
+          <circle cx="260" cy="130" r="118" fill="rgba(47,107,79,.10)" stroke="#2f6b4f" stroke-width="1.5"/>
+          <text x="260" y="30" text-anchor="middle" fill="#2f6b4f" font-size="14" font-weight="700" font-family="Inter,sans-serif">Economic</text>
+          <text x="260" y="48" text-anchor="middle" fill="#2f6b4f" font-size="14" font-weight="700" font-family="Inter,sans-serif">engine</text>
+          <text x="260" y="232" text-anchor="middle" fill="#0c1210" font-size="15" font-weight="700" font-family="Fraunces,Georgia,serif">Regenerative</text>
+          <text x="260" y="252" text-anchor="middle" fill="#1d2a25" font-size="13" font-family="Inter,sans-serif">economy</text>
+        </svg>
+      </div>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Linear economy</th>
+            <th>Sustainability logic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Resource logic</td><td>Take, make, dispose</td><td>Regenerate, restore, reuse</td></tr>
+          <tr><td>Primary metric</td><td>GDP flow</td><td>Capital stocks plus flow</td></tr>
+          <tr><td>Energy</td><td>Fossil extraction</td><td>Renewable flows</td></tr>
+          <tr><td>Waste</td><td>Externalized cost</td><td>Designed out as an input</td></tr>
+          <tr><td>Value model</td><td>Product ownership</td><td>Service and access outcomes</td></tr>
+          <tr><td>Time horizon</td><td>Quarterly</td><td>Intergenerational</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CIRCULARITY -->
+  <section id="circularity" class="rule">
+    <div class="section-head reveal">
+      <span class="eyebrow">The how</span>
+      <h2>Circularity is a ladder, not a bin.</h2>
+      <p class="lede">Recycling sits near the bottom of the circularity ladder because it destroys most of the value embedded in a product. The high rungs cut throughput before it happens.</p>
+    </div>
+    <div class="ladder reveal">
+      <div class="ladder-step"><span class="r">R0</span><span class="name">Refuse</span><p>Make the product unnecessary.</p></div>
+      <div class="ladder-step"><span class="r">R1</span><span class="name">Rethink</span><p>Deliver the function, not the object.</p></div>
+      <div class="ladder-step"><span class="r">R2</span><span class="name">Reduce</span><p>Use less material per unit of value.</p></div>
+      <div class="ladder-step"><span class="r">R3</span><span class="name">Reuse</span><p>Keep products in service longer.</p></div>
+      <div class="ladder-step"><span class="r">R4</span><span class="name">Repair</span><p>Restore function where it fails.</p></div>
+      <div class="ladder-step"><span class="r">R5</span><span class="name">Refurbish</span><p>Renew components to like-new condition.</p></div>
+      <div class="ladder-step"><span class="r">R6</span><span class="name">Remanufacture</span><p>Rebuild to original specification.</p></div>
+      <div class="ladder-step"><span class="r">R7</span><span class="name">Repurpose</span><p>Use parts in a new application.</p></div>
+      <div class="ladder-step"><span class="r">R8</span><span class="name">Recycle</span><p>Recover materials at end of life.</p></div>
+      <div class="ladder-step"><span class="r">R9</span><span class="name">Recover</span><p>Extract energy as the last resort.</p></div>
+    </div>
+    <p class="ladder-note reveal">Each rung preserves a different share of embedded value. The top three rungs avoid material entirely. The middle rungs keep products and components whole. Recycling and recovery accept that the object is gone and salvage only the residue.</p>
+  </section>
+
+  <!-- PATHWAYS -->
+  <section id="pathways" class="rule">
+    <div class="section-head reveal">
+      <span class="eyebrow">Sectoral pathways</span>
+      <h2>Sustainability changes six systems at once.</h2>
+      <p class="lede">The loop runs through every sector, so the fix does too. Each pathway attacks material throughput in its own domain, and each produces carbon and pollution wins together.</p>
+    </div>
+    <div class="levers-grid">
+      <article class="lever reveal">
+        <span class="idx">Sector 01</span>
+        <h3>Energy</h3>
+        <p>Replace fossil flows with renewables and electrify end uses. The metric is the renewable share of primary energy, not installed capacity, because the exhaust is what matters.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">Sector 02</span>
+        <h3>Materials and industry</h3>
+        <p>Green steel, low-clinker cement, and circular chemical feedstocks cut the process emissions that electrification cannot reach. Design for disassembly turns buildings and vehicles into material banks.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">Sector 03</span>
+        <h3>Food and land</h3>
+        <p>Regenerative agriculture rebuilds soil carbon while cutting nitrogen runoff. Halving food loss and waste, which accounts for roughly 8 to 10 percent of global emissions, is the cheapest food-system win available.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">Sector 04</span>
+        <h3>Water</h3>
+        <p>Treat water as a circular resource. Wastewater plants become energy and nutrient suppliers, and urban catchments recharge instead of drain.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">Sector 05</span>
+        <h3>Cities and buildings</h3>
+        <p>Retrofit before rebuild. Buildings account for roughly 37 percent of global energy-related CO₂, and the least-emitting square metre is the one already built.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">Sector 06</span>
+        <h3>Finance and governance</h3>
+        <p>Taxonomies, disclosure, and carbon-plus-material pricing turn sustainability from a reporting exercise into a cost of capital. Money follows the metric that is priced.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section id="metrics" class="rule">
+    <div class="section-head reveal">
+      <span class="eyebrow">Measurement</span>
+      <h2>Measure the stocks, not just the flows.</h2>
+      <p class="lede">A sustainability scorecard tracks the throughput dial and the two exhausts together. Six indicators cover the loop.</p>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-card reveal">
+        <h3>The material footprint by category</h3>
+        <p class="chart-note">Non-metallic minerals, mostly sand, gravel, and cement, dominate the throughput dial. Construction and infrastructure matter more than most climate plans admit.</p>
+        <div class="canvas-box"><canvas id="chartMaterialMix"></canvas></div>
+        <span class="source">UNEP, Global Resources Outlook 2024 (indicative shares)</span>
+      </div>
+      <div class="chart-card reveal">
+        <h3>The sustainability scorecard</h3>
+        <p class="chart-note">Each indicator tracks one capacity of the system. The first two measure throughput; the rest measure whether natural and social capital are holding.</p>
+        <ul class="scorecard">
+          <li><span class="k">Material footprint</span><span class="v">Total raw material mobilized by consumption.</span></li>
+          <li><span class="k">Carbon footprint</span><span class="v">Consumption-based emissions.</span></li>
+          <li><span class="k">Circularity rate</span><span class="v">Secondary materials as a share of all inputs.</span></li>
+          <li><span class="k">Biodiversity intactness</span><span class="v">Ecosystem condition and species abundance.</span></li>
+          <li><span class="k">Water stress</span><span class="v">Withdrawals versus renewable supply.</span></li>
+          <li><span class="k">PM2.5 exposure</span><span class="v">Population-weighted fine-particle exposure.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>Indicator</th>
+            <th>What it tracks</th>
+            <th>Why it matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Material footprint (t per capita)</td><td>Raw material mobilized by consumption</td><td>The throughput dial</td></tr>
+          <tr><td>Carbon footprint (tCO₂e per capita)</td><td>Consumption-based emissions</td><td>The first exhaust</td></tr>
+          <tr><td>Circularity rate (%)</td><td>Secondary materials as a share of inputs</td><td>Loop closure</td></tr>
+          <tr><td>Biodiversity intactness (%)</td><td>Ecosystem condition and species abundance</td><td>Sink capacity</td></tr>
+          <tr><td>Water stress (%)</td><td>Withdrawals versus renewable supply</td><td>The second exhaust</td></tr>
+          <tr><td>PM2.5 exposure (µg/m³)</td><td>Population-weighted fine-particle exposure</td><td>Health co-benefit</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="rule">
+    <div class="section-head reveal">
+      <span class="eyebrow">The sequence</span>
+      <h2>A 2030 sustainability roadmap.</h2>
+      <p class="lede">The levers have a sequence. Price and design changes come first because they make every later step cheaper.</p>
+    </div>
+    <div class="levers-grid">
+      <article class="lever reveal">
+        <span class="idx">2025–2026</span>
+        <h3>Price throughput</h3>
+        <p>Introduce carbon-plus-material pricing and extended producer responsibility so virgin extraction stops looking artificially cheap.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">2026–2027</span>
+        <h3>Set the standards</h3>
+        <p>Publish circular design and green material standards, and require material-footprint disclosure alongside carbon disclosure.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">2027–2028</span>
+        <h3>Scale circular procurement</h3>
+        <p>Governments and large buyers shift purchasing to reused, repaired, and recycled content, creating the demand pull.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">2028–2029</span>
+        <h3>Enforce the waste rules</h3>
+        <p>Methane capture, organics bans, and plastic interception cut the legacy exhausts while new systems mature.</p>
+      </article>
+      <article class="lever reveal">
+        <span class="idx">2029–2030</span>
+        <h3>Restore the sinks</h3>
+        <p>Forest, wetland, and coastal restoration reaches measurable scale, raising the planet's absorption capacity.</p>
+      </article>
+    </div>
+  </section>
+
   <!-- BINDING -->
   <section id="binding" class="binding">
     <span class="eyebrow">The verdict</span>
@@ -536,6 +760,11 @@ tbody td:first-child{font-weight:700;color:var(--ink)}
           <li><a href="#evidence">The evidence</a></li>
           <li><a href="#loop">The feedback loop</a></li>
           <li><a href="#levers">The levers</a></li>
+          <li><a href="#sustainability">Sustainability</a></li>
+          <li><a href="#circularity">Circularity</a></li>
+          <li><a href="#pathways">Pathways</a></li>
+          <li><a href="#metrics">Metrics</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
         </ul>
       </div>
       <div>
@@ -546,6 +775,9 @@ tbody td:first-child{font-weight:700;color:var(--ink)}
           <li><a href="https://www.thelancet.com/commissions/pollution-and-health" target="_blank" rel="noopener">Lancet Commission on Pollution and Health</a></li>
           <li><a href="https://www.oecd.org/en/publications/global-plastics-outlook_de747aef-en.html" target="_blank" rel="noopener">OECD, Global Plastics Outlook 2022</a></li>
           <li><a href="https://www.ipcc.ch/report/ar6/wg3/" target="_blank" rel="noopener">IPCC AR6, Working Group III</a></li>
+          <li><a href="https://www.circularity-gap.world/2024" target="_blank" rel="noopener">Circle Economy, Circularity Gap Report 2024</a></li>
+          <li><a href="https://www.unep.org/resources/report/unep-food-waste-index-report-2024" target="_blank" rel="noopener">UNEP Food Waste Index 2024</a></li>
+          <li><a href="https://globalabc.org/resources/publications/2022-global-status-report-buildings-and-construction" target="_blank" rel="noopener">UNEP, Global Status Report for Buildings 2022</a></li>
           <li><a href="https://www.who.int/data/gho/data/themes/air-pollution" target="_blank" rel="noopener">WHO air quality data</a></li>
         </ul>
       </div>
@@ -656,6 +888,28 @@ tbody td:first-child{font-weight:700;color:var(--ink)}
       datasets: [{
         data: [9, 19, 50, 22],
         backgroundColor: [emeraldBright, smoke, moss, toxic],
+        borderColor: paper,
+        borderWidth: 3,
+        hoverOffset: 8
+      }]
+    },
+    options: {
+      cutout: '60%',
+      plugins: {
+        legend: { labels: { boxWidth: 10, font: { size: 12 } } },
+        tooltip: { callbacks: { label: function(c){ return ' ' + c.label + ': ' + c.parsed + '%'; } } }
+      }
+    }
+  });
+
+  // Material mix
+  new Chart(document.getElementById('chartMaterialMix'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Non-metallic minerals', 'Biomass', 'Fossil fuels', 'Metal ores', 'Other'],
+      datasets: [{
+        data: [47, 23, 16, 10, 4],
+        backgroundColor: [moss, emeraldBright, toxic, smoke, '#b57f1d'],
         borderColor: paper,
         borderWidth: 3,
         hoverOffset: 8
